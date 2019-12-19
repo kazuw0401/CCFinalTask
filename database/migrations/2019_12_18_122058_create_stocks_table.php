@@ -18,6 +18,11 @@ class CreateStocksTable extends Migration
             $table->string('name');
             $table->integer('price');
             $table->text('comment');
+            // 画像保存用に設定
+            //MIMEタイプの保存
+            $table->string('mime',50)->nullable();
+            //publicフォルダ用保存域パス
+            $table->string('path',100)->nullable();
             $table->timestamps();
         });
     }
